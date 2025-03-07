@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/static/css/profile.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/static/images/logo-profile.png" alt="Picture error">
+        <h1>User Profile</h1>
+        <div class="profile-info">
+            <p><strong>Username:</strong> {{ username }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+        </div>
+        <div class="links">
+            <a href="/dashboard">Back to Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

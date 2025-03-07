@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Income/Expense</title>
+    <link rel="stylesheet" href="/static/css/add.css">
+</head>
+<body>
+    <div class="container-1">
+        <div class="header">
+            <img src="/static/images/Logo-2.png" alt="Logo">
+            <p class="Money-tracker">Money-tracker</p>
+        </div>
+        <div id="form-container">
+            <a href="/dashboard" class="back-to-dashboard">Back to Dashboard</a>
+            <form action="/add-transaction" method="POST">
+                <label for="name">Transaction Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="amount">Amount (THB)</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <label for="type">Type</label>
+                <select id="type" name="type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit">Save Transaction</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

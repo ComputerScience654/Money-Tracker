@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="/static/css/History.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Transaction History</h1>
+        <div class="filter-container">
+            <div class="filter-dropdown">
+                <select id="filter" onchange="filterTransactions()">
+                    <option value="all" {% if filter == 'all' %}selected{% endif %}>All</option>
+                    <option value="income" {% if filter == 'income' %}selected{% endif %}>Income</option>
+                    <option value="expense" {% if filter == 'expense' %}selected{% endif %}>Expenses</option>
+                </select>
+            </div>
+            <div class="links">
+                <a href="/dashboard">&#x2B05; Back</a>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction[0] }}</td>
+                    <td>{{ transaction[1] }}</td>
+                    <td>{{ transaction[2] }} บาท</td>
+                    <td>{{ transaction[3] }}</td>
+                    <td>{{ transaction[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function filterTransactions() {
+            var filter = document.getElementById('filter').value;
+            window.location.href = '/transactions?filter=' + filter;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container-1">
+        <div class="header">
+            <img src="/static/images/Logo-2.png" alt="Logo">
+            <p class="Money-tracker">Money-tracker</p>
+            <a href="/profile">
+                <img src="/static/images/logo-profile.png" alt="Profile Logo" class="logo-profile">
+            </a>
+        </div>
+        <div class="content-frame">
+            <div class="chart-container">
+                <canvas id="incomeExpenseChart"></canvas>
+            </div>
+            <div class="balance">
+                <a href="/transactions" class="view-transactions">View Transactions</a>
+                <h2>Balance {{ balance }} THB</h2>
+            </div>
+            <div class="income-expense">
+                <div class="income">
+                    <h3>Total Income {{ total_income }} THB</h3> 
+                </div>  
+                <div class="expense">
+                    <h3>Total Expenses {{ total_expense }} THB</h3>
+                </div>
+            </div>
+            <div class="link-container">
+                <a href="/add-transaction">&#x2795; Add Transaction</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('incomeExpenseChart').getContext('2d');
+        const incomeExpenseChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Income', 'Expenses'],
+                datasets: [{
+                    data: [{{ total_income }}, {{ total_expense }}],
+                    backgroundColor: ['#4CAF50', '#FF5252'],
+                    hoverBackgroundColor: ['#66BB6A', '#FF1744']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw + ' THB';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

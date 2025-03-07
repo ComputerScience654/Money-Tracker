@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-color: #8dc050;
+}
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #8dc050;
+    padding: 80px;
+    position: relative; /* Add relative positioning to the container */
+    margin-top: 40px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Position the header absolutely within the container */
+    top: 20px; /* Adjust the top position as needed */
+    left: 20px; /* Adjust the left position as needed */
+}
+
+.container-1 img {
+    width: 80px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.Money-tracker {
+    color: #333;
+    font-size: 30px;
+    margin-left: 20px; /* Add space between the image and the text */
+}
+
+#form-container {
+    margin-top: 120px; /* Add space to move the form container down */
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* Add relative positioning to the form container */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+label {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+input, select {
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center; /* Center the button */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.back-to-dashboard {
+    position: absolute;
+    top: -12px; /* Adjust the top position as needed */
+    right: 8px; /* Adjust the right position as needed */
+    padding: 10px 10px;
+    background-color: #d80000;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 9.5px;
+}
+
+.back-to-dashboard:hover {
+    background-color: #0056b3;
+}

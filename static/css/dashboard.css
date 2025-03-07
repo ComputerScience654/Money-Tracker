@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-color: #8dc050;
+}
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #8dc050;
+    padding: 80px;
+    position: relative; /* Add relative positioning to the container */
+    margin-top: 40px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add space between elements */
+    width: 100%;
+    position: absolute; /* Position the header absolutely within the container */
+    top: 20px; /* Adjust the top position as needed */
+    left: 20px; /* Adjust the left position as needed */
+}
+
+.container-1 img {
+    width: 80px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.Money-tracker {
+    color: #ffffff;
+    font-size: 30px;
+    margin-left: 10px; /* Reduce space between the image and the text */
+}
+
+.logo-profile {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: auto; /* Push the logo to the right */
+}
+
+.content-frame {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px; /* Add padding */
+    background-color: #75ec7b; /* Add background color */
+    border-radius: 8px; /* Add border radius */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1); /* Add shadow box */
+    margin-top: 20px;
+    text-align: center; /* Center the content */
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* Center the chart */
+}
+
+.balance {
+    width: 100%;
+    padding: 30px; /* Increased padding */
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-top: 20px; /* Adjusted space below the balance */
+    margin-bottom: 20px; /* Increased space below the balance */
+    text-align: center;
+    font-size: 15px; /* Increased font size */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1); /* Add shadow box */
+    position: relative; /* Add relative positioning to the balance container */
+}
+
+.income-expense {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: 100%;
+    padding: 25px; /* Increased padding */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Adds space below the income-expense section */
+    font-size: 13px; /* Increased font size */
+    box-shadow:10px 10px 15px rgba(0, 0, 0, 0.1); /* Add shadow box */
+}
+
+.income, .expense {
+    margin-top: 20px; /* Increased space between income and expense */
+}
+
+.link-container {
+    width: 100%;
+    padding: 20px; /* Increased padding */
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-top: 20px; /* Adds space above the links */
+    text-align: center;
+    font-size: 18px; /* Increased font size */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1); /* Add shadow box */
+}
+
+.link-container a {
+    display: block;
+    margin: 2px 0;
+    color: #000000;
+    text-decoration: none;
+}
+
+.link-container a:hover {
+    text-decoration: underline;
+}
+
+.view-transactions {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    font-size: 12px; /* Adjust the font size as needed */
+    color: #000000;
+    text-decoration: none;
+}
+
+.view-transactions:hover {
+    text-decoration: underline;
+}
+
+.profile-link {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.profile-link:hover {
+    background-color: #0056b3;
+}
